@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="553.0" prefWidth="364.0" style="-fx-background-color: #E7C6A5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="find_your_bmi.FXMLDocumentController">
+   <children>
+      <Label alignment="CENTER" layoutX="-4.0" layoutY="-1.0" prefHeight="85.0" prefWidth="371.0" style="-fx-background-color: orange;" text="BMI Calculator">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="292.0" mnemonicParsing="false" onAction="#calculator" prefHeight="36.0" prefWidth="314.0" style="-fx-background-color: Orange;" text="Calculator BMI">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="male" layoutX="124.0" layoutY="116.0" mnemonicParsing="false" selected="true" text="Male" textFill="#ff8e00">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="female" layoutX="218.0" layoutY="116.0" mnemonicParsing="false" text="Female" textFill="#ff8e00" toggleGroup="$gender">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </RadioButton>
+      <Label alignment="CENTER_RIGHT" layoutX="22.0" layoutY="111.0" prefHeight="30.0" prefWidth="79.0" text="Gender:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="22.0" layoutY="150.0" prefHeight="30.0" prefWidth="79.0" text="Age:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="189.0" prefHeight="30.0" prefWidth="79.0" text="Height:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="21.0" layoutY="233.0" prefHeight="30.0" prefWidth="79.0" text="Weight:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="age" layoutX="121.0" layoutY="149.0" prefHeight="25.0" prefWidth="176.0" promptText="YEARS" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <TextField fx:id="height" layoutX="121.0" layoutY="192.0" prefHeight="31.0" prefWidth="176.0" promptText="CM" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <TextField fx:id="weight" layoutX="121.0" layoutY="236.0" prefHeight="25.0" prefWidth="176.0" promptText="KG" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="376.0" prefHeight="30.0" prefWidth="131.0" text="BMI:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="416.0" prefHeight="30.0" prefWidth="131.0" text="Ideal Weight:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bmi" layoutX="166.0" layoutY="378.0" prefHeight="25.0" prefWidth="176.0" promptText="BMI" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <TextField fx:id="ideal" layoutX="166.0" layoutY="418.0" prefHeight="25.0" prefWidth="176.0" promptText="Ideal Weight" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <TextField fx:id="health" layoutX="166.0" layoutY="457.0" prefHeight="25.0" prefWidth="176.0" promptText="Health Contition" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <TextField fx:id="fat" layoutX="166.0" layoutY="498.0" prefHeight="25.0" prefWidth="176.0" promptText="Body Fat Percentage" style="-fx-border-color: orange; -fx-border-width: 3;" />
+      <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="455.0" prefHeight="30.0" prefWidth="131.0" text="Health:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="12.0" layoutY="495.0" prefHeight="30.0" prefWidth="131.0" text="Body Fat:" textFill="#ff9700">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
