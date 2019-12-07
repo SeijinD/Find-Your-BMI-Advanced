@@ -13,13 +13,14 @@ import javafx.scene.control.TextField;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private TextField age,height,weight,bmi,ideal,health,fat;
+    private TextField age, height, weight ,bmi, ideal, health, fat;
     
     @FXML
-    private RadioButton male,female;
+    private RadioButton male, female;
     
-    public void calculator(ActionEvent event){
-        
+    @FXML
+    public void calculator()
+    {      
         //Inputs
         String gender = null;
         if (male.isSelected())
@@ -30,7 +31,7 @@ public class FXMLDocumentController implements Initializable {
         int a = Integer.parseInt(age.getText());
         double w = Double.parseDouble(weight.getText());
         double h = Double.parseDouble(height.getText());
-        //end
+        //End Inputs
         
         //BMI
         double result = w / ( h * h );
@@ -38,31 +39,33 @@ public class FXMLDocumentController implements Initializable {
         DecimalFormat df = new DecimalFormat ("#.00");
         
         bmi.setText(String.valueOf(df.format(result)));
-        //end
+        //End BMI
         
-        //ideal
+        //Ideal
         double weightMin = Math.round ((18.5*h)*10.0)/10.0;
         double weightMax = Math.round ((25*h)*10.0)/10.0;
     
         String idealweight = (weightMin+ "  To  " +weightMax);
         
         ideal.setText(idealweight);
-        //end
+        //End Ideal
         
-        //fat
+        //Fat
         double bodyFat;
      
-        if(gender.equals("male")){
+        if(gender.equals("male"))
+        {
             bodyFat = Math.round(((1.39*result)+(.16*a)-(10.34*1)-9)*10.0)/10.0;
         }
-        else{
+        else
+        {
             bodyFat =  Math.round(((1.39*result)+(.16*a)-(10.34*0)-9)*10.0)/10.0;
         }
         
         fat.setText(String.valueOf(bodyFat + " % "+ "Body Fat"));
-        //end
+        //End Fat
         
-        //health
+        //Health
         String op = new String();
         
         if (result<=16)
@@ -83,13 +86,11 @@ public class FXMLDocumentController implements Initializable {
             op = "Obese Calss III";
         
         health.setText(op);
-        //end
-        
+        //End Health       
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }     
 }
